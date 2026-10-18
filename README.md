@@ -1,5 +1,7 @@
 # ChuniF4 音击控制器
 
+**手台机体的 3D 模型和原版 DXF 文件来自另一个开源仓库：[Umi4Life/NAGEKI-3.33](https://github.com/Umi4Life/NAGEKI-3.33)。** 本仓库整理收录这些机械文件，并标注来源与改动。
+
 基于 **STM32F411CEU6 / 512 KiB Flash / 25 MHz HSE** 的十键与绝对位置摇杆控制器，包含固件、Windows 上位机、Segatools MU3 输入插件，以及带来源标注的手台模型和 DXF。
 
 自有代码采用 MIT；ST、Arm 等第三方文件保留各自许可。ST USB Device 中间件及其修改受 **SLA0044** 约束；NAGEKI 机械模型和派生 DXF 保留 **MPL-2.0**。详见 [许可证与来源](THIRD_PARTY_NOTICES.md)。
