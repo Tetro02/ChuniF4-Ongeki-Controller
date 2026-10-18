@@ -4,17 +4,20 @@ from pathlib import Path
 import argparse
 import hashlib
 import re
+import subprocess
+import sys
 import zipfile
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--version', default='v0.1.0')
+    ap.add_argument('--version', default='v0.1.1')
     ap.add_argument('--output', type=Path, default=Path('dist'))
     args = ap.parse_args()
     if not re.fullmatch(r'v\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?', args.version):
         ap.error('Expected a release version such as v0.1.0')
     root = Path(__file__).resolve().parents[1]
+    subprocess.run([sys.executable, str(root/'mechanical/verify_sources.py')], check=True)
     image = root/'firmware/MDK-ARM/ChuniF4/ChuniF4.hex'
     binary = root/'build/ChuniF4.bin'
     dll = root/'build/game-io/chunif4_mu3io.dll'
@@ -44,7 +47,7 @@ def main():
     assert all(data[at - 0x08000000] == value for at, value in memory.items())
     files = {'firmware/ChuniF4.hex': image.read_bytes(), 'firmware/ChuniF4.bin': data,
              'game-io/chunif4_mu3io.dll': dll.read_bytes()}
-    for directory in ('host', 'docs', 'licenses'):
+    for directory in ('host', 'docs', 'licenses', 'mechanical'):
         for p in (root/directory).rglob('*'):
             if p.is_file() and '__pycache__' not in p.parts:
                 files[p.relative_to(root).as_posix()] = p.read_bytes()
@@ -55,7 +58,7 @@ def main():
         files['firmware/'+rel] = (root/'firmware'/rel).read_bytes()
     files['README.md'] = f'''# ChuniF4 {args.version} Windows 发布包
 
-包含 STM32F411CEU6 固件、Windows x64 MU3 插件、Python 上位机源码和使用文档。
+包含 STM32F411CEU6 固件、Windows x64 MU3 插件、Python 上位机源码、手台机械模型、DXF 和使用文档。
 
 1. 接线见 docs/HARDWARE.md，仅适配 512 KiB F411CEU6 / 25 MHz HSE。
 2. firmware/ChuniF4.hex 用于烧录；BIN 起始地址 0x08000000。
@@ -66,6 +69,8 @@ def main():
 4. 开始校准、记录物理左 / 中 / 右，点击“保存并应用校准”等待成功。
 5. 游戏关闭后安装 game-io/chunif4_mu3io.dll 并合并示例配置，重启游戏。
    在游戏「レバー設定」重新扫过左右端并退出保存。
+6. mechanical/README.md 标注模型 / DXF 作者、固定版本、原版及修改版；
+   mechanical/sources.json 记录逐文件来源和 SHA-256。机械文件保留 MPL-2.0。
 
 发布包不是自动安装或自动烧录工具。许可详见 THIRD_PARTY_NOTICES.md；
 ST USB 部分保持 SLA0044，其他第三方许可与运行库版权随包保留。

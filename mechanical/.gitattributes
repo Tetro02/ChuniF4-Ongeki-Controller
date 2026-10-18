@@ -1,0 +1,6 @@
+# Keep fixed-revision upstream bytes and delivered DXFs unchanged on checkout.
+upstream/** -text
+*.stl binary
+*.f3d binary
+*.dxf -text
+LICENSE text eol=lf

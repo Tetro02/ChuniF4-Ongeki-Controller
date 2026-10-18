@@ -27,3 +27,5 @@ RM 使用 **PB5**。原设计的 PB2 在所用板上受到 BOOT1 外部下拉影
 USB FS：PA11=D−、PA12=D+；使用带数据线的 USB 线。SWD：PA13=SWDIO、PA14=SWCLK，另接 GND，按调试器要求接参考电压。板卡原有 USB / SWD 布线无需另接到按键。
 
 没有随仓库发布 PCB、连接器顺序或完整原理图。本表是固件 GPIO 分配，不替代具体板卡的电源与封装核对。
+
+手台外壳、WAD、摇杆改件和切割图见 [机械模型与来源](../mechanical/README.md)。机械基准固定为 NAGEKI 3.33；其原作者的 Pro Micro 引脚表不能代替本页 STM32 GPIO 表。

@@ -59,4 +59,6 @@ python -m PyInstaller --noconfirm --clean --windowed --name OngekiControlFlash -
 
 ## 发布包
 
-完成固件、BIN 导出和 DLL 构建后，运行 `python scripts/package-release.py --version v0.1.0`。BIN 放在 `build/ChuniF4.bin`。脚本验证 HEX 校验和、HEX/BIN 对应及程序不侵入校准区，然后打包固件、DLL、Python 上位机源码、文档和许可到 `dist/`。发布包带逐文件 SHA-256；不包含游戏、个人配置、历史备份或本机日志。
+完成固件、BIN 导出和 DLL 构建后，运行 `python scripts/package-release.py --version v0.1.1`。BIN 放在 `build/ChuniF4.bin`。脚本验证 HEX 校验和、HEX/BIN 对应及程序不侵入校准区，核对机械文件来源哈希，然后打包固件、DLL、Python 上位机源码、模型、DXF、文档和许可到 `dist/`。发布包带逐文件 SHA-256；不包含游戏、个人配置、历史备份或本机日志。
+
+只需要模型和 DXF 时，运行 `python scripts/package-mechanical.py --version v0.1.1`。该包包含机械原件、改版图、来源清单、MPL-2.0 全文和引脚参考，不需要 Keil 或 GCC。

@@ -1,0 +1,228 @@
+[
+  {
+    "part": "left",
+    "source": "mechanical/upstream/NAGEKI-3.33/WAD/backplate left.stl",
+    "source_sha256": "b252072b0d5f6e7c6e17d95344529631faa68d35810b742dbd53ad3d54dd9fd6",
+    "source_bounds_mm": [
+      [
+        176.17999267578125,
+        -198.5,
+        5.3179682879545e-14
+      ],
+      [
+        213.9980010986328,
+        -49.792999267578125,
+        2.0
+      ]
+    ],
+    "size_mm": [
+      37.81800842285156,
+      148.70700073242188,
+      1.9999999999999467
+    ],
+    "output_origin": "XY minimum moved to (0,0), no scaling or rotation",
+    "section_z_mm": 0.5,
+    "outer_contours": 1,
+    "through_holes": 0,
+    "sections": {
+      "0.25": {
+        "loops": 1,
+        "absolute_loop_area_mm2": 3206.181772399993
+      },
+      "0.5": {
+        "loops": 1,
+        "absolute_loop_area_mm2": 3206.178626050002
+      },
+      "0.75": {
+        "loops": 1,
+        "absolute_loop_area_mm2": 3206.1823407999937
+      }
+    },
+    "dxf": "backplate-left-CUT.dxf",
+    "all_contours_closed": true,
+    "dxf_readback_passed": true,
+    "spring_holes": [],
+    "spring_hole_method": "Original outer spring-pocket contours converted to full through-holes; no engraving"
+  },
+  {
+    "part": "akari",
+    "source": "mechanical/upstream/NAGEKI-3.33/WAD/backplate akari.stl",
+    "source_sha256": "031eba815f65652b11d2b1d88e735ff461c2171d1a3e37822029467c18e7d8d3",
+    "source_bounds_mm": [
+      [
+        -257.00799560546875,
+        -197.20700073242188,
+        4.3788750566080975e-14
+      ],
+      [
+        -82.0,
+        -48.5,
+        2.0
+      ]
+    ],
+    "size_mm": [
+      175.00799560546875,
+      148.70700073242188,
+      1.9999999999999563
+    ],
+    "output_origin": "XY minimum moved to (0,0), no scaling or rotation",
+    "section_z_mm": 0.5,
+    "outer_contours": 1,
+    "through_holes": 6,
+    "sections": {
+      "0.25": {
+        "loops": 5,
+        "absolute_loop_area_mm2": 25900.82538949998
+      },
+      "0.5": {
+        "loops": 5,
+        "absolute_loop_area_mm2": 25900.825399549984
+      },
+      "0.75": {
+        "loops": 5,
+        "absolute_loop_area_mm2": 25900.82538949998
+      }
+    },
+    "dxf": "backplate-akari-CUT.dxf",
+    "all_contours_closed": true,
+    "dxf_readback_passed": true,
+    "spring_holes": [
+      {
+        "center_from_lower_left_mm": [
+          19.94349560546874,
+          114.10150073242187
+        ],
+        "bbox_size_mm": [
+          15.305000000000007,
+          15.304999999999993
+        ],
+        "source_section_z_mm": 1.2
+      },
+      {
+        "center_from_lower_left_mm": [
+          154.94349560546874,
+          114.10150073242187
+        ],
+        "bbox_size_mm": [
+          15.304999999999993,
+          15.304999999999993
+        ],
+        "source_section_z_mm": 1.2
+      }
+    ],
+    "spring_hole_method": "Original outer spring-pocket contours converted to full through-holes; no engraving"
+  },
+  {
+    "part": "setsuna",
+    "source": "mechanical/upstream/NAGEKI-3.33/WAD/backplate setsuna.stl",
+    "source_sha256": "026dc8465ddc0c150cbe7a1eb2c5f39caa2aa8cdbf0d2a487633c1044f99aa4e",
+    "source_bounds_mm": [
+      [
+        -7.003997802734375,
+        -197.20700073242188,
+        5.3179682879545e-14
+      ],
+      [
+        168.00399780273438,
+        -48.5,
+        2.0
+      ]
+    ],
+    "size_mm": [
+      175.00799560546875,
+      148.70700073242188,
+      1.9999999999999467
+    ],
+    "output_origin": "XY minimum moved to (0,0), no scaling or rotation",
+    "section_z_mm": 0.5,
+    "outer_contours": 1,
+    "through_holes": 6,
+    "sections": {
+      "0.25": {
+        "loops": 5,
+        "absolute_loop_area_mm2": 25900.7957685
+      },
+      "0.5": {
+        "loops": 5,
+        "absolute_loop_area_mm2": 25900.795778549997
+      },
+      "0.75": {
+        "loops": 5,
+        "absolute_loop_area_mm2": 25900.7957685
+      }
+    },
+    "dxf": "backplate-setsuna-CUT.dxf",
+    "all_contours_closed": true,
+    "dxf_readback_passed": true,
+    "spring_holes": [
+      {
+        "center_from_lower_left_mm": [
+          154.94399780273437,
+          114.10250073242187
+        ],
+        "bbox_size_mm": [
+          15.305999999999983,
+          15.305000000000007
+        ],
+        "source_section_z_mm": 1.2
+      },
+      {
+        "center_from_lower_left_mm": [
+          19.943497802734374,
+          114.10250073242187
+        ],
+        "bbox_size_mm": [
+          15.305,
+          15.305000000000007
+        ],
+        "source_section_z_mm": 1.2
+      }
+    ],
+    "spring_hole_method": "Original outer spring-pocket contours converted to full through-holes; no engraving"
+  },
+  {
+    "part": "right",
+    "source": "mechanical/upstream/NAGEKI-3.33/WAD/backplate right.stl",
+    "source_sha256": "e9b49c46ae9f7045a5de1b5186dbe694b14c050172093ecffb72c5eecff62750",
+    "source_bounds_mm": [
+      [
+        249.00299072265625,
+        -197.20700073242188,
+        5.289257936800726e-14
+      ],
+      [
+        285.0,
+        -48.5,
+        2.0
+      ]
+    ],
+    "size_mm": [
+      35.99700927734375,
+      148.70700073242188,
+      1.9999999999999472
+    ],
+    "output_origin": "XY minimum moved to (0,0), no scaling or rotation",
+    "section_z_mm": 0.5,
+    "outer_contours": 1,
+    "through_holes": 0,
+    "sections": {
+      "0.25": {
+        "loops": 1,
+        "absolute_loop_area_mm2": 3070.753849500001
+      },
+      "0.5": {
+        "loops": 1,
+        "absolute_loop_area_mm2": 3070.757410750007
+      },
+      "0.75": {
+        "loops": 1,
+        "absolute_loop_area_mm2": 3070.754122499995
+      }
+    },
+    "dxf": "backplate-right-CUT.dxf",
+    "all_contours_closed": true,
+    "dxf_readback_passed": true,
+    "spring_holes": [],
+    "spring_hole_method": "Original outer spring-pocket contours converted to full through-holes; no engraving"
+  }
+]

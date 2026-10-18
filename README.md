@@ -1,8 +1,8 @@
 # ChuniF4 音击控制器
 
-基于 **STM32F411CEU6 / 512 KiB Flash / 25 MHz HSE** 的十键与绝对位置摇杆控制器，包含固件、Windows 上位机和 Segatools MU3 输入插件。
+基于 **STM32F411CEU6 / 512 KiB Flash / 25 MHz HSE** 的十键与绝对位置摇杆控制器，包含固件、Windows 上位机、Segatools MU3 输入插件，以及带来源标注的手台模型和 DXF。
 
-自有代码采用 MIT；ST、Arm 等第三方文件保留各自许可。特别是 ST USB Device 中间件及其修改受 **SLA0044** 约束，不能把整个固件视为 MIT。详见 [许可证与来源](THIRD_PARTY_NOTICES.md)。
+自有代码采用 MIT；ST、Arm 等第三方文件保留各自许可。ST USB Device 中间件及其修改受 **SLA0044** 约束；NAGEKI 机械模型和派生 DXF 保留 **MPL-2.0**。详见 [许可证与来源](THIRD_PARTY_NOTICES.md)。
 
 ## 功能
 
@@ -46,6 +46,7 @@ python host/lever_calibrate.py wizard --deadzone 0
 | [firmware/](firmware/) | Keil / IAR 工程、CubeMX 配置、MCU 源码及必要第三方依赖 |
 | [host/](host/) | Python 图形上位机、CLI、监测模块及测试 |
 | [game-io/](game-io/) | Windows x64 MU3 插件源码与最小配置示例 |
+| [机械模型与 DXF](mechanical/README.md) | 47 个 STL、2 个 F3D、6 张原版 DXF、4 张背板通孔改版及逐文件出处 |
 | [scripts/](scripts/) | 跨平台软件测试、Windows 编译和打包脚本 |
 | [硬件与接线](docs/HARDWARE.md) | GPIO、有效电平、ADC 与 USB 接线 |
 | [上位机使用](docs/HOST_GUIDE.md) | 十键检测、三点校准、Flash 保存与常见问题 |
@@ -63,6 +64,12 @@ python host/lever_calibrate.py wizard --deadzone 0
 | 右 | 65535 | 32767 | 0 |
 
 固件中的 `invert` 只用于兼容电位器接反；游戏方向转换位于 DLL。上位机 Flash 校准与游戏内行程设置是两套独立设置。
+
+## 手台机械来源
+
+机械基准来自 [Umi4Life/NAGEKI-3.33](https://github.com/Umi4Life/NAGEKI-3.33)，固定提交为 `f7b277a77f77a303357a6cdc2e73a1d9f72dd2f2`；上游分叉自 [5mimusi/NAGEKI](https://github.com/5mimusi/NAGEKI)，摇杆原始机构另引用 [toxikmango/Ongeki-Lever](https://github.com/toxikmango/Ongeki-Lever)。
+
+原版图纸与本项目修改的背板通孔版分别存放，作者、原文件路径、永久链接、修改内容及 SHA-256 均见 [机械来源说明](mechanical/README.md) 和 [逐文件清单](mechanical/sources.json)。机械文件采用上游 MPL-2.0；加工前需进行材料厚度、孔位和弹簧支撑的实物核对。
 
 ## 开发与限制
 

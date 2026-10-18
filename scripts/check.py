@@ -30,6 +30,7 @@ def main():
     for name in ('test_usb_routes.py', 'test_save_handshake.py'):
         run([sys.executable, fw/'tools'/name, scratch])
     run([sys.executable, root/'scripts/test-game-io.py', '--gcc', args.gcc])
+    run([sys.executable, root/'mechanical/verify_sources.py'])
     print('PASS: all offline checks; no USB hardware or MCU Flash accessed.')
 
 
