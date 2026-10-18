@@ -1,0 +1,15 @@
+name: Software checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  native-and-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Python Tk and C compiler
+        run: sudo apt-get update && sudo apt-get install -y python3-tk gcc
+      - name: Run offline software checks
+        run: /usr/bin/python3 scripts/check.py

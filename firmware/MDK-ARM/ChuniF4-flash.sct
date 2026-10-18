@@ -1,0 +1,12 @@
+; Application: first 256 KiB. Sectors 6/7 are exclusively calibration storage.
+LR_IROM1 0x08000000 0x00040000 {
+  ER_IROM1 0x08000000 0x00040000 {
+    *.o (RESET, +First)
+    *(InRoot$$Sections)
+    .ANY (+RO)
+    .ANY (+XO)
+  }
+  RW_IRAM1 0x20000000 0x00020000 {
+    .ANY (+RW +ZI)
+  }
+}
