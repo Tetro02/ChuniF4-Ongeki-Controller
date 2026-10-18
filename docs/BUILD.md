@@ -10,6 +10,8 @@ python scripts/check.py
 
 脚本运行原生校准映射、Flash 故障注入、从实际 HID / 主循环函数提取的模拟测试、Python 协议与 GUI 状态测试，以及从实际 DLL 源码提取的全范围方向测试。产物写入忽略的 `build/`。
 
+GitHub Actions 配置作为 [手动启用示例](software-checks.yml.example) 提供。需要时将其放到 `.github/workflows/software-checks.yml`；通过 OAuth 推送该路径需要 `workflow` 权限。首版保留本地验证结果，没有声称已通过远端 CI。
+
 ## STM32 固件（Windows / Keil）
 
 已验证 Arm Compiler **6.24**，Keil STM32F4xx_DFP **3.1.1**。从 Keil 打开 `firmware/MDK-ARM/ChuniF4.uvprojx`，target 为 `ChuniF4`。
