@@ -58,6 +58,8 @@ def main():
         files['firmware/'+rel] = (root/'firmware'/rel).read_bytes()
     files['README.md'] = f'''# ChuniF4 {args.version} Windows 发布包
 
+**手台机体的 3D 模型和原版 DXF 文件来自另一个开源仓库：[Umi4Life/NAGEKI-3.33](https://github.com/Umi4Life/NAGEKI-3.33)。**
+
 包含 STM32F411CEU6 固件、Windows x64 MU3 插件、Python 上位机源码、手台机械模型、DXF 和使用文档。
 
 1. 接线见 docs/HARDWARE.md，仅适配 512 KiB F411CEU6 / 25 MHz HSE。

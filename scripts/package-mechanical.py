@@ -23,6 +23,8 @@ def main():
         files[name] = (root/name).read_bytes()
     files['README.md'] = f'''# ChuniF4 {args.version} 机械模型 / DXF 包
 
+**手台机体的 3D 模型和原版 DXF 文件来自另一个开源仓库：[Umi4Life/NAGEKI-3.33](https://github.com/Umi4Life/NAGEKI-3.33)。**
+
 请先打开 mechanical/README.md，查看作者、固定提交和原版 / 修改版的区别。
 模型与派生几何来自 Umi4Life/NAGEKI-3.33，继续采用 MPL-2.0；
 原作者及相关 5mimusi、toxikmango 来源均在说明中署名。
